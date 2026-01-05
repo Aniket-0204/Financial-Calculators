@@ -51,6 +51,7 @@ function SWPform({
                 value={annualIncrement}
                 onChange={setAnnualIncrement}
                 suffix="%"
+                helperText="Withdrawal increases by this % every year"
             ></Input>
         </form>
     )
