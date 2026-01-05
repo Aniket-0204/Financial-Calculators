@@ -1,5 +1,5 @@
 
-function SWPSummary({ initialInvestment, totalWithdrawn, lastMonthlyWithdrawal, finalValue, depMonth }) {
+function SWPsummary({ initialInvestment, totalWithdrawn, lastMonthlyWithdrawal, finalValue, depMonth }) {
     const isDepleted = depMonth !== undefined && depMonth !== null;
     const date = new Date();
       
@@ -21,7 +21,7 @@ function SWPSummary({ initialInvestment, totalWithdrawn, lastMonthlyWithdrawal, 
             <dl>
                 <div className="flex justify-between mb-2">
                     <dt className="text-slate-400">Total Investment</dt>
-                    <dd className="font-semibold text-slate-300">₹ {initialInvestment.toLocaleString('en-IN')}</dd>
+                    <dd className="font-semibold text-slate-300">₹ {Number(initialInvestment).toLocaleString('en-IN')}</dd>
                 </div>
                 <div className="flex justify-between mb-2">
                     <dt className="text-slate-400">Total Withdrawn</dt>
@@ -40,4 +40,4 @@ function SWPSummary({ initialInvestment, totalWithdrawn, lastMonthlyWithdrawal, 
     );
 };
 
-export default SWPSummary;
+export default SWPsummary;
