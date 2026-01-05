@@ -1,5 +1,5 @@
 
-function SWPSummary({ initialInvestment, totalWithdrawn, lastMonthlyWithdrawal, finalValue, depMonth }) {
+function SWPsummary({ initialInvestment, totalWithdrawn, lastMonthlyWithdrawal, finalValue, depMonth }) {
     const isDepleted = depMonth !== undefined && depMonth !== null;
     const date = new Date();
       
@@ -40,4 +40,4 @@ function SWPSummary({ initialInvestment, totalWithdrawn, lastMonthlyWithdrawal, 
     );
 };
 
-export default SWPSummary;
+export default SWPsummary;
