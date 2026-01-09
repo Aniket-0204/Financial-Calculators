@@ -11,6 +11,9 @@ function SIPform({ investment, setInvestment, rate, setRate, years, setYears }) 
         onChange={setInvestment}
         prefix={<IndianRupee className="w-4 h-4" />}
         isIndianFormatting={true}
+        max = {1000000}
+        limitMsg= {"Maximum limit: ₹10 Lakhs"}
+       
       ></Input>
       <Input
         type="number"
