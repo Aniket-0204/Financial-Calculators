@@ -42,7 +42,8 @@ export const calculateSWP = (
                         depletionMonth: monthIdx,
                         finalValue: 0,
                         isDepleted: true,
-                        schedule: schedule
+                        schedule: schedule,
+                        lastMonthlyWithdrawal: lastMonthlyWithdrawal || 0
                     })
                 }
               
