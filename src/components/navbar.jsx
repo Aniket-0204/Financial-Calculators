@@ -17,23 +17,25 @@ function Navbar() {
                                 </span>
                             </div>
                         </NavLink>
-                        <div className="flex space-x-1 bg-slate-800 p-1 rounded-lg border border-slate-700">
-                            <NavLink
-                                to="/"
-                                className={({ isActive }) =>
-                                    `flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${isActive
-                                        ? 'bg-slate-700 text-white shadow-sm'
-                                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-700'
-                                    }`
-                                }
-                            >
-                                <TrendingUp className="w-4 h-4" />
-                                SIP
+                        <div className="flex justify-between items-center">
+                            <div className="text-slate-300 font-medium text-sm mr-4">Calculators</div>
+                            <div className="flex space-x-1 bg-slate-800 p-1 rounded-lg border border-slate-700 shadow-md">
+                                <NavLink
+                            to="/"
+                            className={({ isActive }) =>
+                                `flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${isActive
+                                    ? 'bg-slate-700 text-white shadow-sm'
+                                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-700'
+                                }`
+                            }
+                        >
+                            <TrendingUp className="w-4 h-4" />
+                            SIP
                             </NavLink>
                             <NavLink
                                 to="/swp"
                                 className={({ isActive }) =>
-                                    `flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${isActive
+                                    `flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${isActive
                                         ? 'bg-slate-700 text-white shadow-sm'
                                         : 'text-slate-400 hover:text-slate-200 hover:bg-slate-700'
                                     }`
@@ -42,6 +44,7 @@ function Navbar() {
                                 <Calculator className="w-4 h-4" />
                                 SWP
                             </NavLink>
+                            </div>
                         </div>
                     </div>
                 </div>
