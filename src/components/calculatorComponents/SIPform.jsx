@@ -21,6 +21,9 @@ function SIPform({ investment, setInvestment, rate, setRate, years, setYears }) 
         value={rate}
         onChange={setRate}
         suffix="%"
+        max = {30}
+        limitMsg= {"Maximum limit: 30%"}
+        allowDecimals={true}
       ></Input>
       <Input
         type="number"
@@ -28,6 +31,8 @@ function SIPform({ investment, setInvestment, rate, setRate, years, setYears }) 
         value={years}
         onChange={setYears}
         suffix="YR"
+        max = {40}
+        limitMsg= {"Maximum limit: 40 years"}
       ></Input>
     </form>
   )

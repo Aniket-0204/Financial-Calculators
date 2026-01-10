@@ -1,5 +1,18 @@
-export function calculateSIP(investment, rate, years){
-    const monthlyRate = Math.pow((1 + rate/100), 1/12) - 1;
+export function calculateSIP(investment, rate, years) {
+    // Parse inputs
+    const inv = Number(investment) || 0;
+    const rat = Number(rate) || 0;
+    const yrs = Number(years) || 0;
+
+    // Validate inputs
+    if (yrs <= 0 || inv <= 0) {
+        return {
+            invested: 0,
+            returns: 0,
+            total: 0
+        };
+    }
+    const monthlyRate = Math.pow((1 + rate / 100), 1 / 12) - 1;
     const months = years * 12;
     const invested = investment * months;
 
