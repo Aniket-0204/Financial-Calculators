@@ -64,7 +64,7 @@ const Input = ({
         <div className="flex flex-col gap-1 w-full">
             <div className="flex justify-between items-center">
                 <label htmlFor={id} className="text-sm font-medium text-slate-300 cursor-pointer hover:text-slate-100">{label}</label>
-                {isExceeding && <span className="text-[10px] font-bold text-red-400 animate-pulse uppercase">{limitMsg}</span>}
+                {isExceeding && <span className="text-[10px] font-bold text-red-400 uppercase">{limitMsg}</span>}
             </div>
 
             <div className="relative flex items-center">
