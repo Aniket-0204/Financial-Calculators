@@ -25,7 +25,7 @@ function SWPsummary({ initialInvestment, totalWithdrawn, lastMonthlyWithdrawal, 
                 </div>
                 <div className="flex justify-between mb-2">
                     <dt className="text-slate-400">Total Withdrawn</dt>
-                    <dd className="font-semibold text-blue-400">₹ {(Math.round(totalWithdrawn) || 0).toLocaleString('en-IN')}</dd>
+                    <dd className="font-semibold text-blue-500">₹ {(Math.round(totalWithdrawn) || 0).toLocaleString('en-IN')}</dd>
                 </div>
                 <div className="flex justify-between mb-2">
                     <dt className="text-slate-400">Last Monthly Withdrawal</dt>

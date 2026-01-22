@@ -4,6 +4,7 @@ import { Card, CardTitle } from "../components/card";
 import SWPform from "../components/calculatorComponents/SWPform";
 import SWPsummary from "../components/calculatorComponents/SWPsummary";
 import SWPcharts from "../components/calculatorComponents/SWPcharts";
+import SWPContent from "../components/calculatorComponents/SWPContent";
 
 function SWPcalculator() {
   const [initialInvestment, setInitialInvestment] = useState(10000000);
@@ -21,25 +22,25 @@ function SWPcalculator() {
   ),
     [initialInvestment, years, annualReturn, initialMonthlyWithdrawal, annualIncrement]
   )
- 
+
   const chartData = useMemo(() => {
     if (!result.schedule) return [];
     return result.schedule.map((item) => {
-      
+
       const date = new Date();
-      
+
       date.setDate(1) // Reset to start of month to avoid "31st day" overflow bugs
 
-       date.setMonth(date.getMonth() + item.month)
+      date.setMonth(date.getMonth() + item.month)
 
-        const dateForToolkit = date.toLocaleString('en-IN', { 
-            month: 'short', 
-            year: 'numeric' 
-        });
+      const dateForToolkit = date.toLocaleString('en-IN', {
+        month: 'short',
+        year: 'numeric'
+      });
       return {
 
         monthIndex: item.month,
-        hoverLabel : `${dateForToolkit}`,
+        hoverLabel: `${dateForToolkit}`,
         Balance: Math.max(0, Math.round(item.currentValue)),
         Withdrawal: Math.round(item.withdrawal),
         withdrawal: Math.round(item.withdrawal)
@@ -52,7 +53,7 @@ function SWPcalculator() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold text-center mb-8 text-slate-100">SWP Calculator</h1>
+      <h1 className="text-2xl font-bold text-center mb-8 text-slate-300">SWP Calculator</h1>
       <section className="grid gap-8 md:grid-cols-2" aria-label="SWP Calculator Interface">
         <Card as="section">
           <CardTitle> SWP Details</CardTitle>
@@ -83,8 +84,11 @@ function SWPcalculator() {
           finalValue={result.finalValue}
         ></SWPcharts>
       </section>
+
+      <SWPContent />
     </main>
   )
 }
 
 export default SWPcalculator
+

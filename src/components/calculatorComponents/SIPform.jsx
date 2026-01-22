@@ -1,7 +1,7 @@
 import { IndianRupee } from "lucide-react"
 import Input from '../input'
 
-function SIPform({ investment, setInvestment, rate, setRate, years, setYears }) {
+function SIPform({ investment, setInvestment, rate, setRate, years, setYears, stepUp, setStepUp }) {
   return (
     <form className='space-y-6' onSubmit={(e) => e.preventDefault()}>
       <Input
@@ -11,19 +11,9 @@ function SIPform({ investment, setInvestment, rate, setRate, years, setYears }) 
         onChange={setInvestment}
         prefix={<IndianRupee className="w-4 h-4" />}
         isIndianFormatting={true}
-        max = {1000000}
-        limitMsg= {"Maximum limit: ₹10 Lakhs"}
-       
-      ></Input>
-      <Input
-        type="number"
-        label="Expected rate of return (%)"
-        value={rate}
-        onChange={setRate}
-        suffix="%"
-        max = {30}
-        limitMsg= {"Maximum limit: 30%"}
-        allowDecimals={true}
+        max={1000000}
+        limitMsg={"Maximum limit: ₹10 Lakhs"}
+
       ></Input>
       <Input
         type="number"
@@ -31,8 +21,29 @@ function SIPform({ investment, setInvestment, rate, setRate, years, setYears }) 
         value={years}
         onChange={setYears}
         suffix="YR"
-        max = {40}
-        limitMsg= {"Maximum limit: 40 years"}
+        max={40}
+        limitMsg={"Maximum limit: 40 years"}
+      ></Input>
+      <Input
+        type="number"
+        label="Expected rate of return (%)"
+        value={rate}
+        onChange={setRate}
+        suffix="%"
+        max={30}
+        limitMsg={"Maximum limit: 30%"}
+        allowDecimals={true}
+      ></Input>
+      <Input
+        type="number"
+        label="Annual Step-up (%)"
+        value={stepUp}
+        onChange={setStepUp}
+        suffix="%"
+        max={50}
+        limitMsg={"Maximum limit: 50%"}
+        allowDecimals={true}
+        helperText="Increase investment annually"
       ></Input>
     </form>
   )

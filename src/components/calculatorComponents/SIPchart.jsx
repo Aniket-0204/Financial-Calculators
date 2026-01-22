@@ -8,7 +8,7 @@ function SIPchart({ invested, returns, total, years }) {
     { name: "Est. Returns", value: returns }
   ]
 
-  const COLORS = ['#334155', '#3b82f6'];
+  const COLORS = ['#94a3b8', '#3b82f6'];
   return (
     <Card as="figure" className="flex flex-col items-center justify-center min-h-100" aria-label="SIP Projections Chart">
       <CardTitle>Projections</CardTitle>
@@ -20,7 +20,7 @@ function SIPchart({ invested, returns, total, years }) {
               cx="50%"
               cy="50%"
               innerRadius={60}
-              outerRadius={80}
+              outerRadius={100}
               paddingAngle={5}
               dataKey="value"
               stroke="none"

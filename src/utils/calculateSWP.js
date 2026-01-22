@@ -35,10 +35,11 @@ export const calculateSWP = (
             let monthIdx = (year - 1) * 12 + month;
 
             const initialValue = portfolioValue;
-            const valueAfterWithdrawal = portfolioValue - currentMonthlyWithdrawal;
-            let currentValue = valueAfterWithdrawal * (1 + monthlyReturn);
-            portfolioValue = currentValue;
 
+            let currentValue = initialValue * (1 + monthlyReturn);
+
+            const valueAfterWithdrawal = currentValue - currentMonthlyWithdrawal;
+            portfolioValue = valueAfterWithdrawal;
             schedule.push({
                 year: year,
                 month: monthIdx,
