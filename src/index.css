@@ -11,3 +11,11 @@
 body {
   @apply bg-slate-950 text-slate-100 font-sans antialiased;
 }
+
+.recharts-surface:focus,
+.recharts-sector:focus,
+.recharts-curve:focus,
+path:focus,
+svg:focus {
+  outline: none !important;
+}
