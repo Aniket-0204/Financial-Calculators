@@ -15,9 +15,9 @@ function EMIchart({ principal, totalInterest }) {
         `₹ ${Math.round(val).toLocaleString('en-IN')}`;
 
     return (
-        <Card as="figure" className="flex flex-col min-h-100" aria-label="EMI Breakdown Chart">
+        <Card as="figure" className="flex flex-col min-h-120" aria-label="EMI Breakdown Chart">
             <CardTitle>Break-up of Total Payment</CardTitle>
-            <div className="w-full h-64 flex-1">
+            <div className="w-full h-80 flex-1">
                 <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                         <Pie
