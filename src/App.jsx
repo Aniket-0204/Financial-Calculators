@@ -12,6 +12,7 @@ import Loading from './components/Loading';
 const SIPcalculator = lazy(() => import('./pages/SIPcalculator'));
 const SWPcalculator = lazy(() => import('./pages/SWPcalculator'));
 const LumpsumCalculator = lazy(() => import('./pages/LumpsumCalculator'));
+const EMICalculator = lazy(() => import('./pages/EMICalculator'));
 
 // --- 2. Lazy Load Secondary Pages (Marketing/Info) ---
 const LandingPage = lazy(() => import('./pages/LandingPage'));
@@ -98,6 +99,7 @@ function App() {
                   <Route path="/calculators/sip" element={<SIPcalculator />} />
                   <Route path="/calculators/swp" element={<SWPcalculator />} />
                   <Route path="/calculators/lumpsum" element={<LumpsumCalculator />} />
+                  <Route path="/calculators/emi" element={<EMICalculator />} />
 
                   {/* Information Routes */}
                   <Route path="/about" element={<AboutPage />} />

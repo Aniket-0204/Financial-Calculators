@@ -41,6 +41,7 @@ function Navbar() {
                                 <NavLink to="/calculators/sip" className="px-4 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white text-left">SIP Calculator</NavLink>
                                 <NavLink to="/calculators/swp" className="px-4 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white text-left">SWP Calculator</NavLink>
                                 <NavLink to="/calculators/lumpsum" className="px-4 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white text-left">Lumpsum Calculator</NavLink>
+                                <NavLink to="/calculators/emi" className="px-4 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white text-left">EMI Calculator</NavLink>
                             </div>
                         </div>
                     </div>
@@ -62,6 +63,7 @@ function Navbar() {
                     <NavLink to="/calculators/sip" onClick={toggleMenu} className="block py-2 text-slate-400 hover:text-white text-base font-medium pl-4">SIP Calculator</NavLink>
                     <NavLink to="/calculators/swp" onClick={toggleMenu} className="block py-2 text-slate-400 hover:text-white text-base font-medium pl-4">SWP Calculator</NavLink>
                     <NavLink to="/calculators/lumpsum" onClick={toggleMenu} className="block py-2 text-slate-400 hover:text-white text-base font-medium pl-4">Lumpsum Calculator</NavLink>
+                    <NavLink to="/calculators/emi" onClick={toggleMenu} className="block py-2 text-slate-400 hover:text-white text-base font-medium pl-4">EMI Calculator</NavLink>
                 </div>
 
             )

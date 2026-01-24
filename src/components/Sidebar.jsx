@@ -23,6 +23,9 @@ function Sidebar() {
                     <NavLink to="/calculators/lumpsum" className={linkClasses}>
                         Lumpsum Calculator
                     </NavLink>
+                    <NavLink to="/calculators/emi" className={linkClasses}>
+                        EMI Calculator
+                    </NavLink>
                 </nav>
             </div>
         </aside>
