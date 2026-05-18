@@ -11,8 +11,8 @@ function LumpsumForm({ investment, setInvestment, rate, setRate, years, setYears
                 onChange={setInvestment}
                 prefix={<IndianRupee className="w-4 h-4" />}
                 isIndianFormatting={true}
-                limitMsg={"Maximum limit: ₹1 Crores"}
-                max={10000000}
+                limitMsg={"Maximum limit: ₹10 Crores"}
+                max={100000000}
             ></Input>
             <Input
                 type="number"
@@ -30,8 +30,8 @@ function LumpsumForm({ investment, setInvestment, rate, setRate, years, setYears
                 value={years}
                 onChange={setYears}
                 suffix="YR"
-                max={50}
-                limitMsg={"Maximum limit: 50 years"}
+                max={30}
+                limitMsg={"Maximum limit: 30 years"}
             ></Input>
         </form>
     )
